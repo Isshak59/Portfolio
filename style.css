@@ -770,7 +770,7 @@ h4 {
     overflow: hidden;
     display: grid;
     grid-template-columns: 45% 55%;
-    min-height: 500px;
+    min-height: auto;
     transition: all 0.3s ease;
 }
 
@@ -1606,28 +1606,28 @@ footer hr {
 .hero-description, .description, .experience-description, .project-description {
     font-size: 1.1rem;
 }
-
-/* Styles pour les sections à scroll interne (Compétences/Réalisations) */
 #competences,
-#realisations {
-    display: block !important; /* Rétablit l'affichage block pour le scroll interne */
-    overflow-y: auto !important;
-    height: 100vh !important;
+#realisations,
+#experiences,
+#formations,
+#contact {
+    display: block !important;
+    overflow-y: visible !important;
+    height: auto !important;
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
 }
-
-p, /* Sélecteur de base */
-.hero-description p, /* Paragraphes dans la section Accueil */
-.description, /* Descriptions des formations */
-.experience-description, /* Descriptions des expériences */
-.project-slide-description, /* Descriptions des projets dans le slider */
-.project-features li, /* Listes de fonctionnalités */
-.experience-list li, /* Listes d'expériences */
+p,
+.hero-description p,
+.description,
+.experience-description,
+.project-slide-description,
+.project-features li,
+.experience-list li,
 .contact-intro p 
 {
-    font-size: 1.5rem; 
-    line-height: 1.9;
+    font-size: 1.05rem; 
+    line-height: 1.8;
     text-align: justify; 
 }
 
@@ -1643,7 +1643,3 @@ p, /* Sélecteur de base */
     background: var(--darker);
 }
 
-/* Force les sections pleines pages qui ne sont pas auto-height à prendre la taille de l'écran */
-.section:not(.fp-auto-height) {
-    height: 100vh;
-}
